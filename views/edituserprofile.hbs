@@ -1,0 +1,23 @@
+{{> navlogin}}
+
+<div class="userdetailseditablecontainer">
+
+    <form id="usereditprofile" action="/update-user" method="post">
+        <div class="editablebox_user">
+            <div class="editablerow_username">
+                <span class="editlabel">Username:</span>
+                <span class="edittextfieldcontainer"><input type="text" id="edited_username" name="edited_username" placeholder="{{user_info.user_name}}"></span>
+            </div>
+            <div class="editablerow_photo">
+                <span class="editlabel">Profile Photo:</span>
+                <span class="edittextfieldcontainer"><input type="text" id="edited_photo" name="edited_photo" placeholder="{{user_info.user_profilepic}}"></span>
+            </div>
+            <div class="editablerow_desc">
+                <span class="editlabel">Profile Bio:</span>
+                <span class="edittextfieldcontainer"><textarea id="edited_desc" name="edited_desc" placeholder="{{user_info.user_desc}}"></textarea>
+            </div>
+            
+        </div>
+        <span id="savechangebutton" onclick="submitEditUser();">Save Changes</span>
+    </form>
+</div>

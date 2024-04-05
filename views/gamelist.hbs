@@ -1,0 +1,134 @@
+{{#if login}}
+    {{> navlogin}}
+{{else}}
+    {{> nav}}
+{{/if}}
+
+<!--displays game list-->
+<div class="gamelistbodyparent">
+    {{#each game_list}}
+    <div class="gamecontainer" onclick="viewGame('{{game_title}}');">
+        <span id="imagecontainer">
+            <img src="{{game_images}}" id="gameimage"/>
+        </span>
+        <span id="gametitle">
+            {{game_title}}
+        </span>
+        <!-- how rating -->
+        <span id="rating">
+            <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+        </span>
+    </div>
+    {{/each}}
+</div>
+
+    {{!-- <div class="gamecontainer" onclick="viewGame();">
+        <span id="imagecontainer">
+                <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYSzyOTQpKOkfbUptMpq07QYD6lraVeDYVOKd5rTbXdIbAG76f0Kifkc1kw9X1htm5dG7gHAoDzIc71KNthYuD7hSyRJ=s1600" id="gameimage"/>
+        </span>
+        <span id="gametitle">
+            Melty Blood
+        </span>
+        <span id="rating">
+            <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star" id="starrating"></span>
+                    <span class="fa fa-star" id="starrating"></span>
+        </span>
+    </div>
+    <div class="gamecontainer" onclick="viewGame();">
+        <span id="imagecontainer">
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYTH-6zxmF1_9x5KoeIbIqRIz5DZq0T9rEAyfO66_XxM8MRUNBSI5P-fxTnzMJdjZE7zPV_1p8q6BXfa7sNOmdAfyL_FeQ=s1600" id="gameimage"/>
+        </span>
+        <span id="gametitle">
+            Fate/Grand Order
+        </span>
+        <span id="rating">
+            <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star" id="starrating"></span>
+        </span>
+    </div>
+    <div class="gamecontainer" onclick="viewGame();">
+        <span id="imagecontainer">
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYSPo4A41muDLJq44bGX9_NTHCWWmjxCnFai6ItkxaW8P36mzzjdYmexR6T9soK8yag4kXq8mPCIFzG_EzQptSKHn3liLw=s1600" id="gameimage"/>
+        </span>
+        <span id="gametitle">
+            Genshin Impact
+        </span>
+        <span id="rating">
+            <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star" id="starrating"></span>
+        </span>
+    </div>
+    <div class="gamecontainer" onclick="viewGame();">
+        <span id="imagecontainer">
+            <img src="https://www.dexerto.com/cdn-cgi/image/width=3840,quality=75,format=auto/https://editors.dexerto.com/wp-content/uploads/2023/07/12/Honkai-Star-Rail-Tingyun-Ascension-Trace-materials.jpg" id="gameimage"/>
+        </span>
+        <span id="gametitle">
+            Honkai Star Rail
+        </span>
+        <span id="rating" onclick="viewGame();">
+            <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star" id="starrating"></span>
+                    <span class="fa fa-star" id="starrating"></span>
+        </span>
+    </div>
+    <div class="gamecontainer" onclick="viewGame();">
+        <span id="imagecontainer">
+            <img src="https://www.thebubble.org.uk/wp-content/uploads/2023/10/43782979601_1bc697982f_c.jpg" id="gameimage"/>
+        </span>
+        <span id="gametitle">
+            Undertale
+        </span>
+        <span id="rating">
+            <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+        </span>
+    </div>
+    <div class="gamecontainer" onclick="viewGame();">
+        <span id="imagecontainer">
+            <img src="https://cdn.akamai.steamstatic.com/steam/apps/1671210/capsule_616x353.jpg?t=1668504080" id="gameimage"/>
+        </span>
+        <span id="gametitle">
+            Deltarune
+        </span>
+        <span id="rating">
+            <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star" id="starrating"></span>
+        </span>
+    </div>
+    <div class="gamecontainer" onclick="viewGame();">
+        <span id="imagecontainer">
+            <img src="https://i0.wp.com/www.spieltimes.com/wp-content/uploads/2021/12/FNAF-security-chuchu.jpg?fit=1280%2C720&ssl=1" id="gameimage"/>
+        </span>
+        <span id="gametitle">
+            FNAF: Security Breach
+        </span>
+        <span id="rating">
+            <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+        </span>
+    </div> --}}
+</div>

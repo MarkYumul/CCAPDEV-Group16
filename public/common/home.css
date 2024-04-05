@@ -1,0 +1,2079 @@
+/*css for everything*/
+
+/*=== NAVIGATION BAR ==============================================================*/
+
+/*parent container of the navigation bar*/
+.navbarparent{
+    background-color: #41B3A3;
+    display: flex;
+    height: 80px;
+    box-shadow: 0px 2px 6px #0a1d1d72;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/*holds the R-colludium logo found in the navbar*/
+.logoposition{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 300px;
+}
+
+/*sets the size and position of the logo found in the navbar*/
+#homelogo{
+    width: 200px;
+    vertical-align: middle;
+}
+
+/*holds the links found in the navbar*/
+.navbarposition{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 150px;
+}
+
+/*styles the text of the links found in the navbar*/
+.navbarlink{
+    font-size: larger;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+
+    border: none;
+    background-color: transparent;
+    transition: color 0.5s ease;
+}
+
+/*effects that take place when hovering over the links found in the navbar*/
+.navbarlink:hover {
+    cursor: pointer;
+    color: #FF7A54;
+}
+
+/*holds the search function elements found in the navbar*/
+.navbarsearch{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 300px;
+}
+
+/*sets the size/position and styles the search bar found in the navbar*/
+#search{
+    width: 200px;
+    height: 30px;
+    border: none;
+    margin-left: -4px;
+}
+
+/*this is for the search icon */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    color: #41B3A3;
+    width: 30px;
+    height: 32px;
+    vertical-align: middle;
+    background-color: #D0EFEA;
+    padding: 0px;
+    border: none;
+    
+    transition: background-color 0.5s ease;
+}
+  
+/*effects that take place when hovering over the search icon*/
+.material-symbols-outlined:hover {
+    cursor: pointer;
+    background-color: #FF7A54;
+}
+
+.div_navbarsign{
+    display: flex;
+    justify-content: flex-end;
+    width: 370px;
+    margin-right: 10px;
+}
+
+.navbarsignposition{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 130px;
+}
+
+#navbarsignin{
+    font-size: larger;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+
+    border: none;
+    background-color: #FF9DBC;
+    border-radius: 50px;
+    padding: 5px 10px;
+    transition: color 0.5s ease;
+}
+
+/*effects that take place when hovering over the sign in button in the navbar*/
+#navbarsignin:hover {
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+#navbarsignup{
+    font-size: larger;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+
+    border: none;
+    background-color: #FFB270;
+    border-radius: 50px;
+    padding: 5px 10px;
+    transition: color 0.5s ease;
+}
+
+/*effects that take place when hovering over the sign up button in the navbar*/
+#navbarsignup:hover {
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+
+
+
+/*=== BODY ==============================================================*/
+
+/*container for the body*/
+.bodycontainer{
+    background-color: #D0EFEA;;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/*parent container of the body*/
+.bodyparent{
+    display: flex;
+    height: 100%;
+    margin-top: 20px;
+}
+
+/*container for the first ad*/
+.ad1{
+    background-color: #D0EFEA;
+    width: 48%;
+    margin-left: 50px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+}
+
+#ad1image{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.adrightcontainer{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+.ad2{
+    background-color: #2C9687;
+    width: 100%;
+    height: 48%;
+    border-radius: 20px;
+}
+
+.ad2imageholder{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    border: none;
+    background-color: transparent;
+}
+
+#ad2image{
+    width: 88%;
+    transition: transform 0.3s ease;
+    -webkit-user-drag: none;
+}
+
+.ad2:hover #ad2image {
+    transform: scale(1.03);
+}
+
+#ad2image:hover{
+    cursor: pointer;
+}
+
+.ad3{
+    position: relative;
+    background-color: #FF7A54;
+    width: 100%;
+    height: 48%;
+    border-radius: 20px;
+    margin-top: 25px;
+    overflow: hidden;
+}
+
+.ad3:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0000006d; /* Adjust the alpha value for transparency */
+    z-index: 1; /* Place the overlay above the images */
+}
+
+#ad3image{
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.ad3:hover #ad3image {
+    transform: scale(1.01);
+}
+
+.ad3wrapper{
+    display: flex;
+    width: 100%;
+    animation: slide 25s infinite;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateX(0);
+    }
+    10%{
+        transform: translateX(0);
+    }
+    20%{
+        transform: translateX(-100%);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    40%{
+        transform: translateX(-200%);
+    }
+    50%{
+        transform: translateX(-200%);
+    }
+    60%{
+        transform: translateX(-300%);
+    }
+    70%{
+        transform: translateX(-300%);
+    }
+    80%{
+        transform: translateX(-400%);
+    }
+    90%{
+        transform: translateX(-400%);
+    }
+    100%{
+        transform: translateX(-500%);
+    }
+}
+
+.ad3:hover{
+    cursor: pointer;
+}
+
+.bodyparent2{
+    display: flex;
+    background-color: #D0EFEA;
+    height: 700px;
+    margin-top: 20px;
+}
+
+/*=======================================*/
+.container {
+    overflow-x: auto;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    height: auto;
+  }
+  
+  .box {
+    height: 500px;
+    width: 500px;
+    background: rgb(83, 143, 213);
+    margin-right: 5px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+  /*=======================================*/
+
+
+  /*=================VIEW GAME DEV LIST======================*/
+.viewgamedev_header{
+    height: 20%;
+    align-self: center;
+}
+
+#gamedevheader{
+    width: 1100px;
+    margin-top: 5px;
+}
+
+.gamedev_summary{
+    display: flex;
+    align-items: center;
+    background-color: #2C9687;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 220px;
+    margin-top: 20px;
+    border-radius: 10px;
+    
+    transition: transform 0.2s ease;
+}
+
+.gamedev_summary:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+#gamedevlogo_holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #ffffff;
+    border-radius: 15px;
+    background-color: #D0EFEA;
+    width: 30%;
+    height: 90%;
+    margin-left: 10px;
+}
+
+#gamedevlogo{
+    height: 190px;
+}
+
+/*used for hoyoverse logo since it was too big for #gamedevlogo*/
+#gamedevlogo2{
+    height: 65px;
+}
+
+#gamedevrightcontainer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex-grow: 1;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+#gamedevrighttopcontainer{
+    display: flex;
+    height: 30%;
+    border-bottom: 2px solid #ffffff;
+    align-items: center;
+}
+
+#gamedevtitle_holder{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+#gamedevtitle{
+    color: #ffffffe9;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family:'Trebuchet MS', sans-serif;
+}
+
+#gamedevrating_holder{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.checked {
+    color: #ffcb3b;
+}
+
+#starrating{
+    font-size: xx-large;
+}
+
+/*what displays in the game dev or game desc area*/
+#starratinggame{
+    font-size: xxx-large;
+}
+
+#gamedevdesc_holder{
+    margin-top: 20px;
+    max-width: 900px;
+}
+
+#gamedesc{
+    color: #ffffffe9;
+    font-size: large;
+    font-weight: lighter;
+    font-family:'Trebuchet MS', sans-serif;
+    text-align: justify;
+    overflow: hidden;
+}
+
+
+
+ /*====================GAME LIST CSS=================*/
+/*body{
+    margin: 0;
+    
+}*/
+
+.gamelistbodyparent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 1%;
+}
+
+.gamecontainer{
+    background-color: #41B3A3;
+    border-radius: 5%;
+    width: 21%;
+    height: 40vh;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    
+    overflow: hidden;
+}
+
+.gamecontainer:hover{
+    cursor: pointer;
+}
+
+#imagecontainer{
+    background-color: #FF9DBC;
+    display: flex;
+    height: 65%;
+    overflow: hidden;
+}
+
+#gameimage{
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+#gameimage:hover{
+    transform: scale(1.05);
+}
+
+#gametitle{
+    display: flex;
+    color: #ffffff;
+    font-size: x-large;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+#rating{
+    font-size: x-large;
+    display: flex;
+    margin-top: 5%;
+    margin-left: 2%;
+}
+
+.fa-star.checked{
+    color: gold;
+}
+
+
+/*===========================DEV PROFILE CONTENT=========================*/
+
+/*parent container of the whole home page*/
+.devcontentbody{
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-top: 20px;
+}
+
+.devbody1container{
+    display: flex;
+    background-color: #D0EFEA;
+    height: 60vh;
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.367);
+}
+
+.logocontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #41B3A3;
+    background-color: #f0fdff;
+    width: 30%;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#gamedevlogo{
+    height: 90%;
+    -webkit-user-drag: none;
+}
+
+.gamedevrightcontainer{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.gamedevname{
+    color: black;
+    font-size: xxx-large;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', sans-serif;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.gamedevdesc{
+    color: black;
+    font-size: large;
+    font-weight: lighter;
+    font-family: 'Trebuchet MS', sans-serif;
+    /* flex-grow: 1; */
+    height: 55%;
+    max-height: 55%;
+    margin-left: 40px;
+    margin-top: 10px;
+    max-width: 700px;
+    text-align: justify;
+}
+
+.devbody2container{
+    display: flex;
+    flex-direction: column;
+}
+
+.gameheadercontainer{
+    height: 20vh;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#gameheadertitle{
+    width: 1250px;
+    -webkit-user-drag: none;
+}
+
+.gamesparentcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.gamescontainer{
+    background-color: #41B3A3;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 40%;
+    margin-top: 30px;
+    height: 400px;
+}
+
+.gamescontainer:hover{
+    cursor: pointer;
+}
+
+.gameimagecontainer{
+    background-color: #FF7A54;
+    height: 80%;
+    overflow: hidden;
+}
+
+#gameimagedev{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.3s ease;
+}
+
+#gameimage:hover{
+    transform: scale(1.05);
+}
+
+.gamedetailscontainer{
+    display: flex;
+    flex-grow: 1;
+}
+
+#gametitledevcontent{
+    color: #ffffff;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    display: flex;
+    height: 80px;
+    width: 50%;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.gamegenreandreview_container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+#gamegenre{
+    color: #ffffff;
+    font-weight: lighter;
+    font-family: 'Trebuchet MS', sans-serif;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#gamerating{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* this shows the rating of a game dev in the game dev profile*/
+#gamerating-devcompany{
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 3%;
+}
+
+/* this is to center the stars in the make-a-review section*/
+#gamerating2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checked {
+    color: #ffcb3b;
+}
+
+#starrating{
+    font-size: xx-large;
+}
+
+
+
+/*===========================GAME INFO CONTENT=========================*/
+/*parent container of the whole home page*/
+#gameimageinfo{
+    height: 60%;
+    -webkit-user-drag: none;
+}
+
+.gamedevrightcontainer{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#gamedevdesc{
+    background-color: #2C9687;
+    color: black;
+    font-size: large;
+    font-weight: lighter;
+    font-family: 'Trebuchet MS', sans-serif;
+    height: 40%;
+    margin-left: 40px;
+    margin-top: 10px;
+    max-width: 700px;
+    text-align: justify;
+}
+
+#othergamedetails{
+    /* color: black;
+    font-size: large;
+    font-weight: lighter;
+    font-family: 'Trebuchet MS', sans-serif; */
+    height: 100%;
+    width: 150%;
+}
+
+#gameinfoheadertitle{
+    width: 90%;
+    -webkit-user-drag: none;
+}
+
+.reviewsparentcontainer{
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.308);
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    background-color: #D0EFEA;
+    /* border-bottom: 1px solid #035e52;
+    border-top: 1px solid #035e52; */
+}
+
+/* Styles for the stars */
+.rating {
+    height: 15%;
+    font-size: x-large;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for the checked stars */
+.fa-star.checked,
+.fa-star:hover {
+    color: gold;
+    cursor: pointer;
+}
+
+#starrating{
+    font-size: xx-large;
+}
+
+#reviewtitle{
+    margin-bottom: 1%;
+    height: 10%;
+    border: none;
+    width: 50%;
+
+    font-size: larger;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.reviewbox{
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+#writereviewbox{
+    padding: 1%;
+}
+
+#review{
+    height: 30vh;
+    width: 50%;
+    font-size: large;
+    resize: none;
+    border: none;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+input[type="submit"]{
+    font-size: larger;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+
+    border: none;
+    background-color: #41B3A3;
+    border-radius: 50px;
+    padding: 5px 10px;
+    transition: color 0.5s ease;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+.communityreviewscontainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5%;
+}
+
+.reviewholder{
+    border: 3px solid #035e52;
+    background-color: #41B3A3;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    height: 15vh;
+
+    color: #ffffff;
+}
+
+.reviewholderinprofile{
+    border: 3px solid #035e52;
+    background-color: #41B3A3;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    height: 15vh;
+
+    color: #ffffff;
+    flex-grow: 1;
+}
+
+.profilereviewparent{
+    display: flex;
+}
+
+#deletereviewcontainer{
+    width: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#deletereviewbutton{
+    background-color: tomato;
+    border-radius: 5px;
+    padding: 10%;
+    transition: color 0.5s ease;
+
+    font-size: larger;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+#deletereviewbutton:hover {
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+.reviewuserame{
+    width: 5%;
+    height: 100%;
+    background-color: #035e52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#usernametext{
+    font-family: 'Trebuchet MS', sans-serif;
+    color: white;
+
+    transform: rotate(-90deg);
+    z-index: 2;
+}
+
+#userdetails{
+    width: 15vh;
+    vertical-align: middle;
+}
+
+#commenttext{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 0.5%;
+    margin-top: 0.5%;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#commenttitle{
+    font-size: larger;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#commentdesc{
+    font-size: medium;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#ratingholder{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 20%;
+    max-width: 20%;
+    margin-right: 1%;
+
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: small;
+    font-weight: bold;
+}
+
+#helpfulvotes{
+    font-weight: normal;
+    font-size: large;
+}
+
+#dislikevotes{
+    font-weight: normal;
+    font-size: large;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+
+  background-color: transparent;
+  color: #ffffff;
+  text-align: center;
+}
+
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.radio-input {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+  
+.radio-label {
+    cursor: pointer;
+    font-size: 0;
+    color: rgba(0,0,0,0.2);
+    transition: color 0.1s ease-in-out;
+}
+  
+.radio-label:before {
+    content: "★";
+    display: inline-block;
+    font-size: 32px;
+}
+
+.radio-input:checked ~ .radio-label {
+    color: #ffc700;
+    color: gold;
+}
+  
+.radio-label:hover,
+.radio-label:hover ~ .radio-label {
+    color: goldenrod;
+}
+
+.radio-input:checked + .radio-label:hover,
+.radio-input:checked + .radio-label:hover ~ .radio-label,
+.radio-input:checked ~ .radio-label:hover,
+.radio-input:checked ~ .radio-label:hover ~ .radio-label,
+.radio-label:hover ~ .radio-input:checked ~ .radio-label {
+  color: darkgoldenrod;
+}
+
+/*===========================PROFILE CONTENT=========================*/
+/*parent container of the whole home page*/
+.profilebodycontainer{
+    display: flex;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-top: 20px;
+    background-color: #FF7A54;
+}
+
+.userdetailscontainer{
+    background-color: #D0EFEA;
+    height: 40vh;
+    display: flex;
+    flex-grow: 1;
+}
+
+#userimagecontainer{
+    background-color: #41B3A3;
+    width: 20%;
+    border: 2px solid white;
+    margin: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#userimage{
+    width: 70%;
+    max-width: 70%;
+    border-radius: 100%;
+}
+
+#editprofile{
+    font-size: large;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+
+    border: none;
+    background-image: linear-gradient(to right, #FF9DBC, #fa3976);
+    border-radius: 50px;
+    padding: 5px 10px;
+    margin-top: 2%;
+    transition: color 0.5s ease;
+}
+
+/*effects that take place when hovering over the sign in button in the navbar*/
+#editprofile:hover {
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+.otherdetailscontainer{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#username{
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin-top: 1%;
+}
+
+#userdesc{
+    font-size: large;
+    font-weight: lighter;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin-top: 1%;
+}
+
+.userstats{
+    width: 20%;
+    background-color: #41B3A3;
+    display: flex;
+    flex-direction: column;
+}
+
+#reviews{
+    background-color: #4cbeaf;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+#stars{
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+#userdetails{
+    width: 15vh;
+    vertical-align: middle;
+}
+
+#commenttext{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 0.5%;
+    margin-top: 0.5%;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#commenttitle{
+    font-size: larger;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#commentdesc{
+    font-size: medium;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#ratingholder{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 20%;
+    max-width: 20%;
+    margin-right: 1%;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+
+  background-color: transparent;
+  color: #ffffff;
+  text-align: center;
+}
+
+.fa-star.checked{
+    color: gold;
+}
+
+
+
+/*===========================REGULAR LOGIN PAGE===========================================*/
+
+body{
+    margin: 0;
+}
+
+.bodyContainer {
+    /* background-image: url('https://lh3.googleusercontent.com/drive-viewer/AKGpihaD4uLScZm2zskvZE83RyWhB4dJhX7o0JSXbRRjEjj6CJwsCl5KGd_fvC_EK6CK4a3J_NnidhAp1RYrBqgxuTqmybH7fQ=s1600-v0');
+    background-size: cover;
+    background-position: center; */
+    background-color: #D0EFEA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100vh;
+}
+
+.centerContainer {
+    /* box-shadow: 0 1px 15px rgba(0, 0, 0, 0.167); */
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    width: 80%;
+    flex-direction: row;
+} 
+
+.applogo{
+    position: absolute;
+    margin-top: -5%;
+    height: 20%;
+    width: 23%;
+    z-index: 2;
+    /* transform: translateY(15%); */
+    display: flex;
+    right: 2%;
+    top: 16%;
+}
+
+#rcolludiumlogo{
+    height: 80%;
+}
+
+.leftContainer {
+    background-color: #41B3A3;
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#mascot {
+    max-width: 80%;
+    height: fit-content;
+}
+
+.rightContainer {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 0px 5px 5px 0px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#login{
+    width: 60%;
+    height: 40%;
+}
+
+#usernameBar{
+    height: 40%;
+    width: 100%;
+    margin-bottom: 2%;
+    margin-top: 3%;
+}
+
+#login_username{
+    width: 99%;
+    height: 70%;
+    margin-bottom: 15%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #2C9687;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.127);
+    outline: none;
+    text-indent: 5%;
+}
+
+#login_username:focus {
+    outline: 2px solid rgba(0, 0, 0, 0.233); /* Change the outline color to something subtle */
+}
+
+#passwordBar{
+    height: 40%;
+    width: 100%;
+    margin-bottom: 2%;
+    margin-top: 3%;
+}
+
+#login_pass{
+    width: 99%;
+    height: 70%;
+    margin-bottom: 15%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #2C9687;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.127);
+    outline: none;
+    text-indent: 5%;
+}
+
+#login_pass:focus {
+    outline: 2px solid rgba(0, 0, 0, 0.233); /* Change the outline color to something subtle */
+}
+
+#signbuttons{
+    /* background-color: #FFB270; */
+    background-image: linear-gradient(to right, #FFB270, #FF7A54);
+    width: 60%;
+    height: 13%;
+    border-radius: 5px;
+
+    font-size: large;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.5s ease;
+}
+
+#signbuttons:hover{
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+#adminbutton{
+    /* background-color: #FF9DBC; */
+    background-image: linear-gradient(to right, #FF9DBC, #fa3976);
+    width: 60%;
+    height: 13%;
+    border-radius: 5px;
+
+    font-size: large;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.5s ease;
+}
+
+#adminbutton:hover{
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+/* .lineOr {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #41B3A3;
+    text-align: center;
+} */
+
+/*===========================REGISTER WINDOW=========================*/
+
+#register-container{
+    background-image: url('https://lh3.googleusercontent.com/drive-viewer/AKGpihaD4uLScZm2zskvZE83RyWhB4dJhX7o0JSXbRRjEjj6CJwsCl5KGd_fvC_EK6CK4a3J_NnidhAp1RYrBqgxuTqmybH7fQ=s1600-v0');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.289);
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#register-area{
+    background-color: #41B3A3;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.167);
+    margin: auto;
+    width: 35%;
+    height: 70vh;
+    text-align: center;
+    border-radius: 5px;
+    border-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-top: 7%;
+}
+
+#registertextbox{
+    margin-top: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+#new_email{
+    border-radius: 5px;
+    height: 25px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #2C9687;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.127);
+    outline: none;
+    text-indent: 3%;
+}
+
+#new_email:focus {
+    outline: 2px solid rgba(0, 0, 0, 0.233); /* Change the outline color to something subtle */
+}
+
+#new_password{
+    border-radius: 5px;
+    height: 25px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #2C9687;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.127);
+    outline: none;
+    text-indent: 3%;
+}
+
+#new_password:focus {
+    outline: 2px solid rgba(0, 0, 0, 0.233); /* Change the outline color to something subtle */
+}
+
+#new_username{
+    border-radius: 5px;
+    height: 25px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #2C9687;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.127);
+    outline: none;
+    text-indent: 3%;
+}
+
+#new_username:focus {
+    outline: 2px solid rgba(0, 0, 0, 0.233); /* Change the outline color to something subtle */
+}
+
+.input-text input{
+    border: none;
+    background-color: white;
+    width: 50%;
+    height: 60%;
+    padding: 1.5%;
+}
+
+.buttoncontainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+#register-button{
+    border: none;
+    border-radius: 3px;
+    background-image: linear-gradient(to right, #FFB270, #FF7A54);
+    width: 50%;
+    height: 50%;
+    padding: 2%;
+    color: white;
+    transition: color 0.5s ease;
+
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+#register-button:hover{
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+#backout-button{
+    border: none;
+    border-radius: 3px;
+    background-image: linear-gradient(to right, #FF9DBC, #fa3976);
+    width: 50%;
+    height: 50%;
+    padding: 2%;
+    color: white;
+    transition: color 0.5s ease;
+
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+#backout-button:hover{
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+
+#has-account input{
+    border: none;
+    border-radius: 3px;
+    background-color: #FF7A54;
+    width: 53%;
+    height: 60%;
+    padding: 2%;
+    color: white;
+}
+
+/* #signbuttons{
+    background-color: #FFB270;
+    width: 30vh;
+    height: 5vh;
+    border-radius: 5px;
+
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 0.5s ease;
+}
+
+#signbuttons:hover{
+    cursor: pointer;
+    color: #7d7c7c74;
+} */
+
+/*===========================ADMIN LOGIN PAGE=========================*/
+
+#main-parent{
+    background-color: #D0EFEA;
+    display: flex;
+    width: auto;
+    height: 100vh;
+    flex-direction: column;
+    
+}
+
+#login-area{
+    background-color: #41B3A3;
+    margin: auto;
+    width: 35%;
+    height: 70%;
+    text-align: center;
+    border-radius: 5px;
+    border-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#textbox{
+    margin-top: 30%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-text{
+    width: 100%;
+    height: 45%;
+}
+
+#admin-username{
+    width: 55%;
+    height: 40%;
+    margin-bottom: 3%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #035e52;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.164);
+    outline: none;
+    text-indent: 5%;
+}
+
+#admin-username:focus {
+    outline: 2px solid rgba(0, 0, 0, 0.233); /* Change the outline color to something subtle */
+}
+
+#admin-password{
+    width: 55%;
+    height: 40%;
+    margin-bottom: 3%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid #035e52;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.164);
+    outline: none;
+    text-indent: 5%;
+}
+
+#admin-password:focus {
+    outline: 2px solid rgba(0, 0, 0, 0.233); /* Change the outline color to something subtle */
+}
+
+/* .input-text input{
+    border: none;
+    background-color: white;
+    width: 50%;
+    height: 60%;
+    padding: 1.5%;
+} */
+
+#submit-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 23%;
+}
+
+#sign-in-button{
+    width: 55%;
+    height: 45%;
+    background-image: linear-gradient(to right, #FF9DBC, #fa3976);
+    border-radius: 5px;
+    padding: 2%;
+    font-size: large;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    transition: color 0.5s ease;
+}
+
+#sign-in-button:hover{
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+#not-admin{
+    width: 55%;
+    height: 45%;
+    background-image: linear-gradient(to right, #FFB270, #FF7A54);
+    border-radius: 5px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 5%;
+    padding: 2%;
+    font-size: large;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    transition: color 0.5s ease;
+}
+
+#not-admin:hover{
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+#sign-in-button:hover, #not-admin:hover{
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+.devlogocontainer{
+    position: absolute;
+    margin-top: -5%;
+    height: 25%;
+    width: 23%;
+    z-index: 2;
+    /* transform: translateY(15%); */
+    display: flex;
+    flex-direction: column;
+    right: 25%;
+    top: 20%;
+}
+
+#devloginlogo{
+    height: 80%;
+}
+
+/*===================================PROFILE FOR NAV BAR==================*/
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profileimage{
+    width: 10vh;
+    border-radius: 100%;
+}
+
+.profile:hover{
+    cursor: pointer;
+}
+
+
+/* FOR EDIT USER PROFILE PAGE */
+.userdetailseditablecontainer{
+    background-color: #D0EFEA;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.editablebox_user{
+    background-color: #2C9687;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.33);
+    border-radius: 15px;
+    height: 110%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3%;
+}
+
+.editablerow_username{
+    display: flex;
+    height: 25%;
+    align-items: center;
+    margin: 1%;
+}
+
+.editablerow_photo{
+    display: flex;
+    height: 25%;
+    align-items: center;
+    margin: 2%;
+}
+
+.editablerow_desc{
+    display: flex;
+    height: 70%;
+    align-items: center;
+}
+
+.editlabel{
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.edittextfieldcontainer{
+    flex-grow: 1;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#edited_username{
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    border: none;
+
+    font-size: larger;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+#edited_photo{
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    border: none;
+
+    font-size: larger;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+#edited_desc{
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    border: none;
+
+    font-size:larger;
+    resize: none;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+
+#savechangebutton{
+    display: flex;
+    justify-content: center;
+    font-size: large;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+
+    border: none;
+    background-image: linear-gradient(to right, #FF9DBC, #fa3976);
+    border-radius: 50px;
+    padding: 1%;
+    margin-top: 2%;
+    transition: color 0.5s ease;
+}
+
+/*effects that take place when hovering over the sign in button in the navbar*/
+#savechangebutton:hover {
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+/* FOR GAME DEV PROFILE */
+
+.addgamebuttoncontainer{
+    background-color: #fa3976;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#addgamebutton{
+    background-color: #035e52;
+    font-size: x-large;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    padding: 1%;
+    border-radius: 20px;
+    transition: color 0.5s ease;
+}
+
+#addgamebutton:hover{
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+#editgamebutton{
+    background-color: #2C9687;
+    font-size: x-large;
+    color: white;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    padding: 1%;
+    border-radius: 20px;
+    transition: color 0.5s ease;
+}
+
+#editgamebutton:hover{
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+/* FOR EDIT GAME DEV PROFILE */
+#edited_devname{
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    border: none;
+
+    font-size: larger;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+#edited_devphoto{
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    border: none;
+
+    font-size: larger;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+#edited_devdesc{
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    border: none;
+
+    font-size:larger;
+    resize: none;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* FOR ADD GAMES TO GAME DEV PROFILE */
+#addnew_gamename{
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    border: none;
+
+    font-size: larger;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+#addnew_gamephoto{
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    border: none;
+
+    font-size: larger;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+#addnew_gamedesc{
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    border: none;
+
+    font-size:larger;
+    resize: none;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.savegamebuttoncontainer{
+    height: 15vh;
+    width: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#savegamebutton{
+    font-size: x-large;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+
+    border: none;
+    background-image: linear-gradient(to right, #FF9DBC, #fa3976);
+    border-radius: 50px;
+    padding: 3%;
+    margin-top: 2%;
+    transition: color 0.5s ease;
+}
+
+#savegamebutton:hover {
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+#deletegamebutton{
+    font-size: x-large;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+
+    border: none;
+    background-image: linear-gradient(to right, #ff9d9d, #fa3939);
+    border-radius: 50px;
+    padding: 3%;
+    margin-top: 2%;
+    transition: color 0.5s ease;
+}
+
+#deletegamebutton:hover {
+    cursor: pointer;
+    color: #7d7c7c74;
+}
+
+#change_gamename{
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    border: none;
+
+    font-size: larger;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+#change_gamephoto{
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    border: none;
+
+    font-size: larger;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+#change_gamedesc{
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    border: none;
+
+    font-size:larger;
+    resize: none;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.replybuttonposition{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 130px;
+}
+
+#replybutton{
+    font-size: medium;
+    font-weight: bolder;
+    color: #ffffff;
+    font-family: 'Trebuchet MS', sans-serif;
+
+    border: none;
+    background-color: #FF9DBC;
+    border-radius: 50px;
+    padding: 5px 10px;
+    transition: color 0.5s ease;
+}
+
+#replylabeltext{
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+
+#replytextfieldcontainer{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#reply_content{
+    margin-top: 10%;
+    padding-right: 100%;
+    padding-bottom: 20%;
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    border: none;
+    font-size:larger;
+    resize: none;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* RECENT ADDED MARK */
+
+.adminreviewholder{
+    border: 3px solid #035e52;
+    background-color: #41B3A3;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    margin-left: 10%;
+    margin-right: 5%;
+    margin-bottom: 2%;
+    height: 15vh;
+
+    color: #ffffff;
+}
+
+.adminReviewUsername{
+
+}

@@ -1,0 +1,16 @@
+{{> navlogin}}
+
+<!-- COPY PASTED FROM EDITUSERPROFILE.HBS, I JUST CHANGED THE IDS AND NAMES -->
+
+<div class="userdetailseditablecontainer">
+    <div class="editablebox_user">
+        <form id="replycomment" action="/create_response" method="post"> <!-- diko sure sa action srys -->
+            <div class="adminreplies">
+                <span class="editlabel">Reply:</span>
+                <span class="edittextfieldcontainer"><textarea id="responsedesc" name="responsedesc" placeholder="Enter reply here"></textarea>
+                <input type="hidden" id="response_reviewid" name="response_reviewid" value="{{review_id}}">
+            </div>
+        </div>
+        <span id="savechangebutton" onclick="submitDevResponse();">Send Reply</span>
+        </form>
+</div>

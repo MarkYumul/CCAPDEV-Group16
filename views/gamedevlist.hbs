@@ -1,0 +1,31 @@
+{{#if login}}
+    {{> navlogin}}
+{{else}}
+    {{> nav}}
+{{/if}}
+
+<!--Game Devs list are here, different html page, accessed via /game-devs-->
+{{#each gamedevs}}
+<div class="gamedev_summary"  onclick="viewGameDev('{{devCompany_title}}');">
+            <div id="gamedevlogo_holder">
+                <img src="{{devCompany_logo}}" id="gamedevlogo"/>
+            </div>
+            <div id="gamedevrightcontainer">
+                <div id="gamedevrighttopcontainer">
+                <div id="gamedevtitle_holder">
+                    <span id="gamedevtitle">{{devCompany_title}}</span>
+                </div>
+                <div id="gamedevrating_holder">
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star checked" id="starrating"></span>
+                    <span class="fa fa-star" id="starrating"></span>
+                </div>
+                </div>
+                <div id="gamedevdesc_holder">
+                    <span id="gamedesc">{{devCompany_desc}}</span>
+                </div>
+            </div>
+        </div>
+{{/each}}

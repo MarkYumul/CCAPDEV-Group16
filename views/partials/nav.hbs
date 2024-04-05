@@ -1,0 +1,31 @@
+<!--navigation bar as a partial-->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<div class="navbarparent">
+        <span class="logoposition"><img src="https://lh3.googleusercontent.com/drive-viewer/AEYmBYRdZ6OgjGKuDPJHURllE7aMWcToBxhFMD0ENyUYI152jafTIaHxpwqTRJ_XgmtdRwTZj6V2Ut1KROMItH-pQXPLAIJf3w=s1600" id="homelogo"/></span>
+        <span class="navbarposition">
+            <button class="navbarlink" id="viewhome" onclick="viewHome();">Home</button>
+        </span>
+        <span class="navbarposition">
+            <button class="navbarlink" id="viewgamedevs" onclick="viewGameDevs();">Game Devs</button>
+        </span>
+        <span class="navbarposition">
+            <button class="navbarlink" id="viewgames" onclick="viewGames();">Games</button>
+        </span>
+        <span class="navbarsearch">
+            <form id="search1" name="search1" action="/search" method="post">
+                <button class="material-symbols-outlined" onclick="submitSearch('search1');">
+                    search
+                </button>
+                <input type="text" id="search_bar" name="search_bar" placeholder="search">
+            </form>
+        </span>
+        <div class="div_navbarsign">
+        <span class="navbarsignposition">
+            <button id="navbarsignin" onclick="viewRegLogin();">Sign In</button>
+        </span>
+        <span class="navbarsignposition" onclick="viewRegister();">
+            <button id="navbarsignup">Sign Up</button>
+        </span>
+    </div>
+    </div>

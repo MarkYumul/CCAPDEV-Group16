@@ -1,0 +1,51 @@
+{{> navlogin}}
+
+<!-- COPY PASTED FROM DEVCONTENT.HBS IDK IF MAY NEED BA BAGUHIN FOR NOW
+        i only added a button for edit profile, add/edit games palang -->
+
+<div class="devcontentbody">
+        <div class="devbody1container">
+            <div class="logocontainer">
+                <img src="{{devCompany.devCompany_logo}}" id="gamedevlogo"/>
+                <span id="editprofile" onclick="editGameDevProfile();">Edit Profile</span> <!-- REPLACE __ IN ONCLICK TO THE FUNCTION THAT SENDS GAME DEV TO EDIT PROFILE PAGE-->
+            </div>
+            <div class="gamedevrightcontainer">
+                <span class="gamedevname">{{devCompany.devCompany_title}}</span>
+                <span class="gamedevdesc">{{devCompany.devCompany_desc}}</span>
+                <span id="gamerating-devcompany">
+                        <span class="fa fa-star checked" id="starratinggame"></span>
+                        <span class="fa fa-star checked" id="starratinggame"></span>
+                        <span class="fa fa-star checked" id="starratinggame"></span>
+                        <span class="fa fa-star checked" id="starratinggame"></span>
+                        <span class="fa fa-star checked" id="starratinggame"></span>
+                    </span>
+            </div>
+        </div>
+        <div class="devbody2container">
+        
+            <div class="gamesparentcontainer">
+                {{#each devGames}}
+                <div class="gamescontainer" onclick="viewGame('{{game_title}}');">
+                    <div class="gameimagecontainer">
+                        <img src="{{game_images}}" id="gameimagedev"/>
+                    </div>
+                    <div class="gamedetailscontainer">
+                    <span id="gametitledevcontent">
+                        {{game_title}}
+                    </span>
+                    <div class="gamegenreandreview_container">
+                    <span id="gamerating">
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                    </span>
+                </div>
+                
+                </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+</div>

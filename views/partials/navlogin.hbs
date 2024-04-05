@@ -1,0 +1,28 @@
+<nav class="navbarparent">
+        <span class="logoposition"><img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihafWO3eo2lIJGOZ2WPtUVwxm7cds7tBXnIEcdLnAvWsVaJqBCT79teO_OJa246KhsQqQTvZKmiXxfFeSBa3V8YtayKD0g=s1600" id="homelogo"/></span>
+        <span class="navbarposition">
+            <button class="navbarlink" onclick="viewHome();">Home</button>
+        </span>
+        <span class="navbarposition">
+            <button class="navbarlink" onclick="viewGameDevs();">Game Devs</button>
+        </span>
+        <span class="navbarposition" onclick="viewGames();">
+            <button class="navbarlink">Games</button>
+        </span>
+        <span class="navbarsearch">
+            <form id = "search2" name = "search2" action="/search" method="post">
+                <button class="material-symbols-outlined" onclick="submitSearch('search2');">
+                search
+                </button>
+                <input type="text" id="search_bar" name="search_bar" placeholder="search">
+            </form>
+        </span>
+        <div class="div_navbarsign">
+        <span class="navbarsignposition" onclick="displayProfile();">
+            <button id="navbarsignin">View Profile</button>
+        </span>
+        <span class="navbarsignposition" onclick="logout();">
+            <button id="navbarsignup">Log Out</button>
+        </span>
+    </div>
+</nav>

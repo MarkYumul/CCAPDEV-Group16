@@ -1,0 +1,290 @@
+{{#if login}}
+    {{> navlogin}}
+{{else}}
+    {{> nav}}
+{{/if}}
+
+
+<div class="devcontentbody">
+    <div class="devbody1container">
+        <div class="logocontainer">
+            <img src='{{gameinfo.game_images}}' id="othergamedetails">
+        </div>
+        <div class="gamedevrightcontainer">
+            <span class="gamedevname">{{gameinfo.game_title}}</span>
+            <span class="gamedevdesc">{{gameinfo.game_desc}}</span>
+            <span id="gamerating-devcompany"> <!-- also works for gamedev profile/desc-->
+                        <span class="fa fa-star checked" id="starratinggame"></span>
+                        <span class="fa fa-star checked" id="starratinggame"></span>
+                        <span class="fa fa-star checked" id="starratinggame"></span>
+                        <span class="fa fa-star checked" id="starratinggame"></span>
+                        <span class="fa fa-star checked" id="starratinggame"></span>
+                    </span>
+        </div>
+    </div>
+    <div class="devbody2container">
+        <div class="gameheadercontainer">
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpiharYf5O-LltOZoibAa8G5jetrjFUK32QJcIvrW65wi43rOoYe2PpFhUwEWVtjfmLs4mTAF8WbrjwHbTWSr8aoo-bhSnwQ=s1600-v0" id="gameinfoheadertitle"/>
+        </div>
+        <div class="reviewsparentcontainer">
+
+            {{#if login}}
+                {{#unless is_dev}}
+                    <div class="reviewbox">
+
+                        <div id="gamerating2" class="rating">
+                            <form class="star-rating">
+                                <input class="radio-input" type="radio" id="star5" name="star-input" value="5" onclick="reviewRating(this);"/>
+                                <label class="radio-label" for="star5" title="5 stars">5 stars</label>
+
+                                <input class="radio-input" type="radio" id="star4" name="star-input" value="4" onclick="reviewRating(this);"/>
+                                <label class="radio-label" for="star4" title="4 stars">4 stars</label>
+
+                                <input class="radio-input" type="radio" id="star3" name="star-input" value="3" onclick="reviewRating(this);"/>
+                                <label class="radio-label" for="star3" title="3 stars">3 stars</label>
+
+                                <input class="radio-input" type="radio" id="star2" name="star-input" value="2" onclick="reviewRating(this);"/>
+                                <label class="radio-label" for="star2" title="2 stars">2 stars</label>
+
+                                <input class="radio-input" type="radio" id="star1" name="star-input" value="1" onclick="reviewRating(this);"/>
+                                <label class="radio-label" for="star1" title="1 star">1 star</label>
+                            </form>
+                        </div>
+
+    
+                        <form id="writereviewbox" name="writereviewbox" action="/create-review" method="post">
+                            <input type="hidden" id="starRating" name="starRating" value="">
+                            <input type="hidden" id="gameid" name="gameid" value="{{gameinfo.game_id}}">
+                            <input type="hidden" id="gamename" name="gamename" value="{{gameinfo.game_title}}">
+                            <input type="text" id="reviewtitle" name="reviewtitle" placeholder="Title"><br>
+                            <textarea id="review" name="review" placeholder="Write a review..."></textarea>
+                            <p><input type="submit" value="Submit"></p>
+                        </form>
+
+                    </div>
+                {{/unless}}
+            {{/if}}
+
+        </div>
+        
+
+        {{#each reviews}}
+        <div class="communityreviewscontainer">
+            <div class="reviewholder">
+                <div class="reviewuserame">
+                    <span id="usernametext">{{user_name}}</span>
+                    </div>
+                <div>
+                    <img src="{{user_profilepic}}" id="userdetails" onclick="viewOtherUser('{{user_id}}');"/>
+                </div>
+                <div id="commenttext">
+                    <span id="commenttitle">{{review_title}}</span><br>
+                    <span id="commentdesc">{{review_desc}}</span>
+                    <!--put if statement here for admin reply-->
+
+                    {{#if ../owner}}
+                        <form id="reply" action="/reply" method="get">
+                            <span id="replybuttonposition">
+                                <input type="hidden" id="reviewid" name="reviewid" value="{{review_id}}">
+                                <button id="replybutton" onclick="viewReplyWindow();">Reply</button>
+                            </span>
+                        </form>
+                    {{/if}}
+
+                </div>
+                <div id="ratingholder">
+                    <span>
+                        helpful?
+                        <span id="helpfulvotes">
+                            {{review_upvotes}}
+                        </span>
+                        <span class="material-symbols-outlined" 
+                        {{#if ../login}}
+                        onclick = "upvoteReview('{{review_id}}');"
+                        {{/if}}
+                        >
+                            thumb_up
+                        </span>
+                        
+                        
+                        <span id="dislikevotes" >
+                        {{review_downvotes}}
+                        </span>
+                        <span class="material-symbols-outlined" 
+                        {{#if ../login}}
+                            onclick = "downvoteReview('{{review_id}}');"
+                        {{/if}}
+                        >
+                            thumb_down
+                        </span>
+                    </span>
+                    <span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                    </span>
+                </div>
+            </div>
+
+            {{#if hasResponse}}
+                <div class="adminreviewholder">
+                    <div class="reviewuserame">
+                        <span id="usernametext">{{devCompany_title}}</span>
+                        </div>
+                    <div>
+                        <img src="{{devCompany_logo}}" id="userdetails" onclick="viewGameDev('{{devCompany_title}}');"/>
+                    </div>
+                    <div id="commenttext">
+                        <span id="commentdesc">{{response_desc}}</span>
+                        <!--put if statement here for admin reply-->
+                        </span>
+                    </div>
+                </div>
+            {{/if}}
+            <!-- UNTIL HERE -->
+        </div>
+        {{/each}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+        {{!-- <div class="communityreviewscontainer">
+            <div class="reviewholder">
+                <div>
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" id="userdetails"/>
+                    
+                </div>
+                <div id="commenttext">
+                    <span id="commenttitle">Would highly recommend</span><br>
+                    <span id="commentdesc">Would recomment this to my son, my son's son, my son's son's son.                      
+                    </span>
+                </div>
+                <div id="ratingholder">
+                    <span>
+                        helpful?
+                        <span class="material-symbols-outlined">
+                            thumb_up
+                        </span>
+                        <span class="material-symbols-outlined">
+                            thumb_down
+                        </span>
+                    </span>
+                    <span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star" id="starrating"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="communityreviewscontainer">
+            <div class="reviewholder">
+                <div>
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" id="userdetails"/>
+                    
+                </div>
+                <div id="commenttext">
+                    <span id="commenttitle">10/10</span><br>
+                    <span id="commentdesc">I like it
+                        
+                    </span>
+                </div>
+                <div id="ratingholder">
+                    <span>
+                        helpful?
+                        <span class="material-symbols-outlined">
+                            thumb_up
+                        </span>
+                        <span class="material-symbols-outlined">
+                            thumb_down
+                        </span>
+                    </span>
+                    <span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="communityreviewscontainer">
+            <div class="reviewholder">
+                <div>
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" id="userdetails"/>
+                    
+                </div>
+                <div id="commenttext">
+                    <span id="commenttitle">smiley face</span><br>
+                    <span id="commentdesc">it's fine but could be better
+                        
+                    </span>
+                </div>
+                <div id="ratingholder">
+                    <span>
+                        helpful?
+                        <span class="material-symbols-outlined">
+                            thumb_up
+                        </span>
+                        <span class="material-symbols-outlined">
+                            thumb_down
+                        </span>
+                    </span>
+                    <span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="communityreviewscontainer">
+            <div class="reviewholder">
+                <div>
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" id="userdetails"/>
+                    
+                </div>
+                <div id="commenttext">
+                    <span id="commenttitle">ily sir pat uwu -group 16</span><br>
+                    <span id="commentdesc"> salamat sa high grades YASSSS &#9825;
+                        
+                    </span>
+                </div>
+                <div id="ratingholder">
+                    <span>
+                        helpful?
+                        <span class="material-symbols-outlined">
+                            thumb_up
+                        </span>
+                        <span class="material-symbols-outlined">
+                            thumb_down
+                        </span>
+                    </span>
+                    <span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                        <span class="fa fa-star checked" id="starrating"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> --}}

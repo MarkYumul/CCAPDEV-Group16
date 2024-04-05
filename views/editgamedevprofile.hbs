@@ -1,0 +1,23 @@
+{{> navlogin}}
+
+<!-- COPY PASTED FROM EDITUSERPROFILE.HBS, I JUST CHANGED THE IDS AND NAMES -->
+
+<div class="userdetailseditablecontainer">
+    <div class="editablebox_user">
+        <form id="gamedevprofileedit" action="/update-dev" method="post">
+            <div class="editablerow_username">
+                <span class="editlabel">Developer Name:</span>
+                <span class="edittextfieldcontainer"><input type="text" id="edited_devname" name="edited_devname" placeholder="{{devCompany.devCompany_title}}"></span>
+            </div>
+            <div class="editablerow_photo">
+                <span class="editlabel">Developer Photo:</span>
+                <span class="edittextfieldcontainer"><input type="text" id="edited_devphoto" name="edited_devphoto" placeholder="{{devCompany.devCompany_logo}}"></span>
+            </div>
+            <div class="editablerow_desc">
+                <span class="editlabel">Developer Bio:</span>
+                <span class="edittextfieldcontainer"><textarea id="edited_devdesc" name="edited_devdesc" placeholder="{{devCompany.devCompany_desc}}"></textarea>
+            </div>
+        </div>
+        <span id="savechangebutton" onclick="submitEditDev();">Save Changes</span>
+    </form>
+</div>

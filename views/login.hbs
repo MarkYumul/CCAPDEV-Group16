@@ -1,0 +1,43 @@
+<div class="bodyContainer">
+    <div class="applogo">
+        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbvVjCOpmkv7m9OT492xV4xSosZopSaw8sJGMQSXvgIEjYnVTLUYS5HgUwAAHBgDdSdM3Tp4XIhNMWAHpHK31hYbuaG6A=s1600-v0" id="rcolludiumlogo">
+    </div>
+            <div class="centerContainer">
+                <div class="leftContainer">
+                    <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihZkWff97PbyefV3tHb38XhWcWKZzu1rH5sr5PojdhHMqxdsUuHWrD0yXnXch_MGJqRa4im-rKigL7x9XSEDWQUQzNDl=s1600-v0" id="mascot"/>
+                </div>
+                <div class="rightContainer">
+                    <form id = "login" name = "login" action="/verify_user" method="post">
+                        <div id="usernameBar">
+                            <input type="text" id="login_username" name="login_username" placeholder="Username"></input>
+                        </div>
+                        <div id="passwordBar">
+                            <input type="password" id="login_pass" name="login_pass" placeholder="Password"></input>
+                        </div>
+                    </form>
+                    <div id="signbuttons" onclick="submitLogin();">
+                            <span>Sign In</span> 
+                    </div>
+                    {{!-- <div class="lineOr">
+                        <span id="leftLine">
+                            ==========
+                        </span>
+                        <span id="orText">
+                            OR
+                        </span>
+                        <span id="rightLine">
+                            ==========
+                        </span>
+                    </div> --}}
+                    <div id="signbuttons" onclick="viewRegister();">
+                        <span>Sign Up</span> 
+                    </div>
+                    <div id="signbuttons" onclick="viewHome();">
+                        <span>Continue As Guest</span> 
+                    </div>
+                    <div id="adminbutton" onclick="viewAdmin();">
+                        <span>Game Dev Access</span> 
+                    </div>
+                </div>
+            </div>
+        </div>

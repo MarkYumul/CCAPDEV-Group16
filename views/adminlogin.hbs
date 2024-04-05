@@ -1,0 +1,27 @@
+<div id="main-parent">
+    <div class="devlogocontainer">
+        <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihbIPJkTLmmATpOHv-NeFVyg6hcbxuJAiIhEvHJYeWaAruXL2iC2qU9RlcOsYoqkw7z6dUgFfmLFGHPXuLluvxqfbhdAoQ=s1600-v0" id="devloginlogo"/>
+    </div>
+        <div id="login-area">
+            <form id="admin-login" name = "admin-login" action = "/verify_admin" method="post">
+            <div id="textbox">
+                <div class="input-text">
+                    <input type="text" id="admin_username" name="admin_username" placeholder="Username"/><br><br>
+                </div>
+                <div class="input-text">
+                    <input type="password" id="admin_password" name="admin_password" placeholder="Password"/><br><br><br>
+                </div>
+            </div>
+           </form>
+           <div id="submit-area">
+            <div id="sign-in-button" onclick="submitAdminLogin();">
+                <span>Sign-in</span>
+            </div>
+            
+            <div id="not-admin" onclick="viewRegLogin();">
+                <span>I am not a game dev</span>
+            </div>
+            </div>
+    
+        </div>
+    </div>

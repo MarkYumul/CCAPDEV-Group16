@@ -1,0 +1,27 @@
+<div id="register-container">
+    <div id="register-area">
+        <form id = "createUser" name = "createUser" action = "/add-user" method="post">
+            <div id="registertextbox">
+                <div class="input-text">
+                    <input type="text" id="new_email" name="new_email" placeholder="Enter Email"/><br><br>
+                </div>
+                <div class="input-text">
+                    <input type="text" id="new_password" name="new_password" placeholder="Enter Password"/><br><br><br>
+                </div>
+                <div class="input-text">
+                    <input type="text" id="new_username" name="new_username" placeholder="New Username"/><br><br><br>
+                </div>
+            </div>
+        <div class="buttoncontainer">
+            <div id="register-button" onclick="submitNewAccount();">
+                <span>Register Account</span>
+            </div>
+        </form>
+    </div>
+    <div class="buttoncontainer">
+        <div id="backout-button" onclick="viewRegLogin();">
+            <span>I have an Account</span>
+        </div>
+    </div>
+</div>
+</div>

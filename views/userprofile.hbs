@@ -1,0 +1,72 @@
+{{#if login}}
+    {{> navlogin}}
+{{else}}
+    {{> nav}}
+{{/if}}
+
+<div class="profilebodycontainer">
+    <div class="userdetailscontainer">
+        <span id="userimagecontainer">
+            <img src="{{user_info.user_profilepic}}" id="userimage"/>
+            <span id="editprofile" onclick="editProfile();">Edit Profile</span>
+        </span>
+        <span class="otherdetailscontainer">
+            <span id="username">
+                {{user_info.user_name}}
+            </span>
+            <span id="userdesc">
+                <br>{{user_info.user_desc}}
+            </span>
+        </span>
+        <span class="userstats">
+            <span id="reviews">
+                3 reviews made
+            </span>
+            <span id="stars">
+                7 stars given
+            </span>
+        </span>
+    </div>
+</div>
+
+<div class="communityreviewscontainer">
+    {{#each reviews}}
+    <div class="profilereviewparent">
+    <div class="reviewholderinprofile">
+        <div class="reviewuserame">
+            <span id="usernametext">{{user_name}}</span>
+            </div>
+        <div>
+            <img src="{{user_profilepic}}" id="userdetails"/>
+        </div>
+        <div id="commenttext">
+            <span id="commenttitle">{{review_title}}</span><br>
+            <span id="commentdesc">{{review_desc}}</span>
+        </div>
+        <div id="ratingholder">
+            <span>
+                helpful?
+                <span class="material-symbols-outlined">
+                    thumb_up
+                </span>
+                <span class="material-symbols-outlined">
+                    thumb_down
+                </span>
+            </span>
+            <span>
+                <span class="fa fa-star checked" id="starrating"></span>
+                <span class="fa fa-star checked" id="starrating"></span>
+                <span class="fa fa-star checked" id="starrating"></span>
+                <span class="fa fa-star checked" id="starrating"></span>
+                <span class="fa fa-star" id="starrating"></span>
+            </span>
+        </div>
+    </div>
+    {{#if same_user}}
+    <div id="deletereviewcontainer">
+        <div id="deletereviewbutton" onclick="deleteReview('{{review_id}}');">delete</div>
+    </div>
+    {{/if}}
+    </div>
+    {{/each}}
+</div>
