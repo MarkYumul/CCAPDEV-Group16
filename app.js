@@ -16,7 +16,7 @@ server.engine('hbs', handlebars.engine({
 server.use(express.static('public'));
 
 const mongoose = require('mongoose');
-const mongo_uri = 'mongodb://127.0.0.1:27017/r_colludium';
+const mongo_uri = 'mongodb+srv://markisaiahyumul:fishy@cluster0.bnfm8sm.mongodb.net/';
 mongoose.connect(mongo_uri);
 
 const bcrypt = require('bcrypt');
